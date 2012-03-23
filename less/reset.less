@@ -22,7 +22,7 @@ html, body {
 }
 
 h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, cite, code, del, dfn, em, img, q, s, samp, small, strike, strong, sub, sup, tt, var, dd, dl, dt, li, ol, ul, fieldset, form, label, legend, button, table, caption, tbody, tfoot, thead, tr, th, td { 
-	margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-size: 100%; line-height: 1; font-family: inherit; 
+	margin: 0; padding: 0; border: 0; font-weight: normal; font-style: normal; font-size: 100%; line-height: 1.4; font-family: inherit; 
 }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { 
@@ -57,6 +57,7 @@ body {
 	.serif();
 	color: rgb(40,40,40); 
 	background-color: transparent; 
+	.clearfix();
 }
 
 button, 
@@ -80,36 +81,37 @@ h6 {
 }
 
 h1 { 
-	margin-bottom: @baseline / 2;
+	margin: 0;
 	.font-size(48);
 	line-height: 1.2; 
 }
 
 h2 { 
-	margin-bottom: @baseline / 2;
+	margin: 0;
 	.font-size(32);
 	line-height: 1.2; 
 }
 
 h3 { 
-	margin-bottom: @baseline / 1.5;
+	margin: 0;
 	.font-size(24);
 	line-height: 1.3; 
 }
 
 h4 { 
-	margin-bottom: @baseline / 1.5;
+	margin: 0;
 	.font-size(18);
 	line-height: 1.25; 
 }
 
 h5 { 
-	margin-bottom: @baseline;
+	margin: 0;
 	.font-size(16);  
 }
 
 h6 { 
 	.font-size(16); 
+    margin: 0;
 }
 
 // 3. TYPOGRAPHY (320 and Up typography defaults) =============================================================================
@@ -416,60 +418,15 @@ textarea {
 }
 
 ::-webkit-input-placeholder {
-	.font-size(14; 
+	.font-size(14); 
 }
 
 input:-moz-placeholder { 
-	.font-size(14; 
+	.font-size(14); 
 }
 
 .ie7 img,
 .iem7 img { 
 	-ms-interpolation-mode: bicubic; 
-}
-
-// 9 HELPER CLASSES =============================================================================
-
-.ir { 
-	display: block; 
-	overflow: hidden; 
-	background-repeat: no-repeat; 
-	text-align: left; 
-	text-indent: -999em; 
-	direction: ltr; 
-}
-
-.ir br { 
-	display: none; 
-}
-
-.hidden { 
-	display: none; 
-	visibility: hidden; 
-}
-
-.visuallyhidden { 
-	position: absolute;
-	margin: -1px;
-	padding: 0;
-	height : 1px;
-	width: 1px;
-	overflow: hidden;
-	border: 0; 
-	clip: rect(0 0 0 0); 
-}
-
-.visuallyhidden.focusable:active, 
-.visuallyhidden.focusable:focus { 
-	position: static;
-	margin: 0; 
-	height: auto; 
-	width: auto;
-	overflow: visible; 
-	clip: auto; 
-}
-
-.invisible { 
-	visibility: hidden; 
 }
 

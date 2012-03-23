@@ -82,6 +82,49 @@ overflow : hidden; }
 clear : both; }
 }
 
+.ir { 
+	display: block; 
+	overflow: hidden; 
+	background-repeat: no-repeat; 
+	text-align: left; 
+	text-indent: -999em; 
+	direction: ltr; 
+}
+
+.ir br { 
+	display: none; 
+}
+
+.hidden { 
+	display: none; 
+	visibility: hidden; 
+}
+
+.visuallyhidden { 
+	position: absolute;
+	margin: -1px;
+	padding: 0;
+	height : 1px;
+	width: 1px;
+	overflow: hidden;
+	border: 0; 
+	clip: rect(0 0 0 0); 
+}
+
+.visuallyhidden.focusable:active, 
+.visuallyhidden.focusable:focus { 
+	position: static;
+	margin: 0; 
+	height: auto; 
+	width: auto;
+	overflow: visible; 
+	clip: auto; 
+}
+
+.invisible { 
+	visibility: hidden; 
+}
+
 // borderradius
 
 .rounded(@radius:3px) {
