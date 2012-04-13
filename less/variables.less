@@ -1,0 +1,67 @@
+/* Variables */
+
+// -------- typography
+
+// To establish vertical rhythm. This should match the line height.
+@baseline : 1.5em;
+@basefontsize : 16;
+
+.header-font {
+	font-family : "Helvetica Neue", Helvetica, Arial, sans-serif; 
+}
+
+.body-font {
+	font-family : "Cambria, Georgia, Times, "Times New Roman; 
+}
+
+.monospace {
+	font-family : "Monaco", Courier New, monospace; 
+}
+
+// ------- colors
+
+@basecol : #0099FF;	    // Base colour
+@compcol : spin(@basecol, 180);  	// Complementary colour
+
+@headingcol : @basecol; // Heading color
+
+@buttoncol : #660099;
+
+// Links
+
+@linkcol : rgb(1,53,104);
+@linkcolhover : darken(@linkcol, 10);
+@linkcolvisited : @linkcolhover;
+@linkcolfocus : @linkcolhover;
+
+// ------- greyscale
+
+@black : rgb(0,0,0);
+@darkgrey : lighten(@black, 25%);
+@grey : lighten(@black, 50%);
+@lightgrey : lighten(@black, 75%);
+@lightergrey : lighten(@black, 90%);
+@white : rgb(255,255,255);
+
+// ------- colour palettes
+
+@col_l1 : lighten(@basecol, 5%);
+@col_l2 : lighten(@basecol, 10%);
+@col_l3 : lighten(@basecol, 15%);
+@col_l4 : lighten(@basecol, 20%);
+
+@col_d1 : darken(@basecol, 5%);
+@col_d2 : darken(@basecol, 10%);
+@col_d3 : darken(@basecol, 15%);
+@col_d4 : darken(@basecol, 20%);
+
+@comp_l1 : lighten(@compcol, 5%);
+@comp_l2 : lighten(@compcol, 10%);
+@comp_l3 : lighten(@compcol, 15%);
+@comp_l4 : lighten(@compcol, 20%);
+
+@comp_d1 : darken(@compcol, 5%);
+@comp_d2 : darken(@compcol, 10%);
+@comp_d3 : darken(@compcol, 15%);
+@comp_d4 : darken(@compcol, 20%);
+

@@ -1,0 +1,101 @@
+/* Grid */
+
+@numcols: 16;
+@gutter: 0.5; //Gutter is foo x 1col
+@pagewidth: 960;
+
+@marginfixed: (1 - 1/(@gutter+1))*(@pagewidth/@numcols)/2;
+@marginfluid: (1 - 1/(@gutter+1))*(100/@numcols)/2;
+/*
+@media (min-width: 480px) {
+	@numcols: 8;
+	@gutter: 0.5; //Gutter is foo x 1col
+	@pagewidth: 480;
+}
+
+@media (min-width: 720px) {
+	@numcols: 12;
+	@gutter: 0.5; //Gutter is foo x 1col
+	@pagewidth: 720;
+}
+
+@media (min-width: 960px) {
+	@numcols: 16;
+	@gutter: 0.5; //Gutter is foo x 1col
+	@pagewidth: 960;
+}
+*/
+
+
+
+.spanfixed(@x) {
+	@colwidth: (@pagewidth/@numcols)*@x - @marginfixed * 2;
+	width: ~"@{colwidth}px";
+	margin: ~"@{marginfixed}px";
+	float: left;
+}
+
+.spanfluid(@x) {
+	@colwidth: (100/@numcols)*@x - @marginfluid * 2;
+	width: ~"@{colwidth}%";
+	margin: ~"@{marginfluid}%";
+	float: left;
+}
+
+.offsetfixed(@x) {
+	@offset: (@pagewidth/@numcols)*@x + @marginfixed*1;
+	margin-left: ~"@{offset}px";
+}
+
+.offsetfluid(@x) {
+	@offset: (100/@numcols)*@x + @marginfluid*1;
+	margin-left: ~"@{offset}%";
+}
+
+
+
+[class*="span"] {
+	background: #EEE;
+}
+
+.row {
+	.clearfix;
+	text-align: center;
+}
+
+.span1 {
+	.spanfluid(1);
+}
+
+.span3 {
+	.spanfluid(3);
+}
+
+.span4 {
+	.spanfluid(4);
+}
+
+.span6 {
+	.spanfluid(6);
+}
+
+.span8 {
+	.spanfluid(8);
+}
+
+.span12 {
+	.spanfluid(12);
+}
+
+.span16 {
+	.spanfluid(16);
+}
+
+.offset4 {
+	.offsetfluid(4);
+	
+}
+
+.offset3 {
+	.offsetfluid(3);
+}

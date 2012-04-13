@@ -8,7 +8,7 @@
 <!--[if (gt IE 9])|(gt IEMobile 7)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 
 	<head>
-		<title><!-- Page title --></title>
+		<title>G-Set Boilerplate</title>
 		
 		<!-- Shortcut icon -->
 		<link rel="shortcut icon" href="/favicon.ico">
@@ -32,30 +32,33 @@
 		<!-- CSS -->
 					
 			<!-- Base CSS -->
-			<link rel="stylesheet/css" type="text/css" href="css/style.css">
+			<link rel="stylesheet/less" type="text/less" href="less/style.less">
 			<link rel="stylesheet/css" type="text/css" media="print" href="css/print.css">
 			
 			<!-- For progressively larger displays -->
-			<link rel="stylesheet/css" type="text/css" media="only screen and (min-width: 480px)" href="css/480.css">
-			<link rel="stylesheet/css" type="text/css" media="only screen and (min-width: 768px)" href="css/768.css">
-			<link rel="stylesheet/css" type="text/css" media="only screen and (min-width: 992px)" href="css/992.css">
+			<link rel="stylesheet/css" type="text/css" media="only screen and (min-width: 480px)" href="less/480.less">
+			<link rel="stylesheet/css" type="text/css" media="only screen and (min-width: 768px)" href="less/768.less">
+			<link rel="stylesheet/css" type="text/css" media="only screen and (min-width: 992px)" href="less/992.less">
 			
 			<!-- OLD IE bring in all stylesheets -->
 			<!--[if (lt IE 9) & (!IEMobile)]>
-				<link rel="stylesheet/css" type="text/css" href="css/480.css">
-				<link rel="stylesheet/css" type="text/css" href="css/768.css">
-				<link rel="stylesheet/css" type="text/css" href="css/992.css">
+				<link rel="stylesheet/less" type="text/less" href="less/480.less">
+				<link rel="stylesheet/less" type="text/less" href="less/768.less">
+				<link rel="stylesheet/less" type="text/less" href="less/992.less">
 			<![endif]-->
 			
 		<!-- CSS end-->
 		
 		<!-- JAVASCRIPT: Must run straight away -->
-		
+			
+			<!-- LESS (Delete if you have exported/compiled) -->
+			<script src="js/libs/less.js"></script>
+						
 			<!-- jQuery library -->
-			<script src="/js/libs/jquery-1.6.2.min.js"></script>			
+			<script src="js/libs/jquery-1.6.2.min.js"></script>			
 			
 			<!-- Ability Sniffing -->
-			<script src="/js/libs/modernizr-2.0.6.min.js"></script>
+			<script src="js/libs/modernizr-2.0.6.min.js"></script>
 			
 			<!-- Offer to turn old IE into Chrome -->
 			<!--[if lt IE 7 ]>
@@ -66,21 +69,311 @@
 						
 	</head>
 
-	<body class="clearFix">
+	<body>
 		
 		<header id="mastHead">
-			<!-- Header Template -->
+			<h1>G-Set Boilerplate</h1>
 		</header>
 		
-		<section id="content" class="clearFix">
-			<!-- Content template -->
-			<!-- 
-				#primary, #secondary, #tertiary content blocks
-			-->
+		<section id="content">
+						
+			<section id="primary">
+				<h1>Heading 1</h1>
+				<h2>Heading 2</h2>
+				<h3>Heading 3</h3>
+				<h4>Heading 4</h4>
+				<h5>Heading 5</h5>
+				<h6>Heading 6</h6>
+				
+				<p>
+					This is a paragraph with <strong>strong text</strong>, <b>bold text</b>, <em>emphasised text</em> and <i>italic text</i>. Cheesecake sweet tootsie roll. Biscuit muffin lemon drops. Jelly tiramisu cookie sesame snaps cupcake gummi bears chocolate cake tiramisu fruitcake. Cotton candy pudding sugar plum chocolate cake sesame snaps cupcake sesame snaps. Candy canes gummi bears fruitcake. Marshmallow halvah cheesecake candy cupcake sugar plum cotton candy jujubes. Jujubes croissant donut caramels liquorice muffin. Bonbon gummi bears halvah macaroon. Jelly bear claw macaroon marshmallow cupcake sweet halvah.
+				</p>
+				
+				<blockquote>
+					This is a block quote it says things that are quotey
+					
+					<cite>I. P. Freely</cite>
+				</blockquote>
+				
+				<q>This is a q quote it is much smaller yo</q>
+				
+				<pre>
+Pre tags are gnarly, they can be very useful
+				</pre>
+				
+				<a href="http://i-sh.at">Do not click here, this is an anchor</a>
+				
+				<abbr title="abbreviation">abbr</abbr>
+				
+				<acronym>Acronym</acronym>
+				
+				<address>
+					Holiday Extras
+					Ashford Road
+					Newingreen
+					Hythe, Kent
+				</address>
+				
+				<code>
+if ($element = 'code') {
+	writeCodeInIt();
+}
+				</code>
+				
+				<samp>
+The samp element indicates text which is an example (sample) of something. It is similar to code
+				</samp>
+								
+				<p>
+					The use of the <dfn>Definition term</dfn> element can be seen in this code.
+				</p>
+				
+				<figure>
+					<img src="http://www.funnyquotespictures.com/wp-content/uploads/2012/01/e5fae_Funny_Cat_Photos_With_Captions_490423135_a7e8e7b8fa.jpg" width="250px" alt="This is an img tag" />
+					<figcaption>Figcaption should describe the image. This image is lulz.</figcaption>
+				</figure>
+				
+				
+				<p>
+					<s>The s tag</s> is very similar <strike>to the strike tag</strike> but they are depreciated, use <del>the del tag</del> instead
+				</p>
+				
+				<p>
+					The 1<sup>st</sup> time I used super text I felt <sub>subhuman</sub>
+				</p>
+				
+				<p>
+					Da fuq is <tt>teletype text</tt>
+				</p>
+				
+				<p>
+					The <var>Variable tag</var> is for variables. No way. 
+				</p>
+				
+				<dl>
+					<dt>Definition list</dt>
+					<dd>A list of definitions.</dd>
+					<dd>Also good for explanations</dd>
+					
+					<dt>Your mum</dt>
+					<dd>A real fat lady</dd>
+				</dl>
+				
+				<ul>
+					<li>In an unordered list</li>
+					<li>It doesn't matter what order things are in</li>
+					<li>Sometimes they are nested
+						<ul>
+							<li>Nested</li>	
+						</ul>
+					</li>
+				</ul>
+				
+				<ol>
+					<li>Ordered lists must be</li>
+					<li>In the correct order</li>
+				</ol>
+				
+				<form>
+					<fieldset>
+						<legend>Legends are legendary</legend>
+						
+						<ul>
+							<li>
+								<label for="aFormElement">Label this input</label>
+								<input type="text" id="aFormElement" placeholder="A text input" />
+							</li>
+							<li><input type="search" id="aFormElement" placeholder="A search input" /></li>
+							<li><input type="email" id="aFormElement" placeholder="An email input" /></li>
+							<li><input type="color" id="aFormElement" placeholder="A color input" /></li>
+							<li><input type="date" id="aFormElement" placeholder="A date input" /></li>
+							<li><input type="datetime" id="aFormElement" placeholder="A datetime input" /></li>
+							<li><input type="datetime-local" id="aFormElement" placeholder="A datetime-local input" /></li>
+							<li><input type="month" id="aFormElement" placeholder="A month input" /></li>
+							<li><input type="number" id="aFormElement" placeholder="A number input" /></li>
+							<li><input type="range" id="aFormElement" placeholder="A range input" /></li>
+							<li><input type="tel" id="aFormElement" placeholder="A tel input" /></li>
+							<li><input type="time" id="aFormElement" placeholder="A time input" /></li>
+							<li><input type="url" id="aFormElement" placeholder="A url input" /></li>
+							<li><input type="week" id="aFormElement" placeholder="A week input" /></li>
+							
+							<li><input type="checkbox" /></li>
+							
+							<li><input type="radio" /></li>
+							
+							<li><select>
+								<option value="">Selects are cool</option>
+							</select></li>
+							
+							<li><textarea placeholder="Textareas are an area of text"></textarea></li>
+							
+							<li><input type="submit" value="Submit inputs" /></li>
+							
+							<li><input type="reset" value="and reset inputs" /></li>
+							
+							<li><button type="submit">Are real similar to submit buttons</button></li>
+						</ul>
+					</fieldset>
+				</form>
+				
+				<table>
+					<thead>
+						<tr>
+							<th>Tables</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Should be used for tabular data</td>
+						</tr>
+						<tr>
+							<td>
+								Ya feel me?
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<article>
+					<h3>Articles</h3>
+					
+					<p>
+						Are almost self contained you know.
+					</p>
+										
+				</article>
+				
+				<aside>As an aside, I slept with your wife last night.</aside>
+	
+				<details>
+					<summary>Summary: Nobbed yer missus</summary>
+					<p>I don't want to go into the <em>details</em>, but it was messy.</p>
+				</details>
+				
+				<footer>
+					<nav>
+						<a href="#">You can even put a nav in a footer in a section</a>
+					</nav>
+					
+					<small>In this <em>small tag</em> I'll just say I can't be arsed with audio, canvas or video.</small>
+				</footer>
+			</section>
+			
+			<section id="secondary">
+				<h3>Grid system</h3>
+				
+				<section id="gridSystem">
+				  <div class="page-header">
+					<h1>Default grid system <small>12 columns with a responsive twist</small></h1>
+				  </div>
+				
+				  <div class="row show-grid">
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+					<div class="span1">1</div>
+				  </div>
+				  <div class="row show-grid">
+					<div class="span4">4</div>
+					<div class="span4">4</div>
+					<div class="span4">4</div>
+					<div class="span4">4</div>
+				  </div>
+				  <div class="row show-grid">
+					<div class="span4">4</div>
+					<div class="span4">4</div>
+					<div class="span8">8</div>
+				  </div>
+				  <div class="row show-grid">
+				  	<div class="span4">4</div>
+					<div class="span6">6</div>
+					<div class="span6">6</div>
+				  </div>
+				  <div class="row show-grid">
+					<div class="span12">12</div>
+					<div class="span4">4</div>
+				  </div>
+				  <div class="row show-grid">
+					<div class="span16">16</div>
+				  </div>
+				  <div class="row">
+					<div class="span4">
+					  <p>The default grid system provided as part of Buttstrap is a <strong>960px-wide, 16-column grid</strong>.</p>
+					  <p>It also has four responsive variations for various devices and resolutions: phone, tablet portrait, table landscape and small desktops, and large widescreen desktops.</p>
+					</div><!-- /.span -->
+					<div class="span4">
+				<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span8"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+					</div><!-- /.span -->
+					<div class="span4">
+					  <p>As shown here, a basic layout can be created with two "columns," each spanning a number of the 12 foundational columns we defined as part of our grid system.</p>
+					</div><!-- /.span -->
+				  </div><!-- /.row -->
+				
+				  <br>
+				
+				  <h2>Offsetting columns</h2>
+				  <div class="row show-grid">
+					<div class="span4">4</div>
+					<div class="span4 offset4">4 offset 4</div>
+				  </div><!-- /row -->
+				  <div class="row show-grid">
+					<div class="span3 offset3">3 offset 3</div>
+					<div class="span3 offset3">3 offset 3</div>
+				  </div><!-- /row -->
+				  <div class="row show-grid">
+					<div class="span8 offset4">8 offset 4</div>
+				  </div><!-- /row -->
+				<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span4 offset4"</span><span class="tag">&gt;</span><span class="pln">...</span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+				
+				  <br>
+				
+				  <h2>Nesting columns</h2>
+				  <div class="row">
+					<div class="span6">
+					  <p>With the static (non-fluid) grid system in Bootstrap, nesting is easy. To nest your content, just add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column.</p>
+					  <h3>Example</h3>
+					  <p>Nested rows should include a set of columns that add up to the number of columns of it's parent. For example, two nested <code>.span3</code> columns should be placed within a <code>.span6</code>.</p>
+					  <div class="row show-grid">
+						<div class="span6">
+						  Level 1 of column
+						  <div class="row show-grid">
+							<div class="span3">
+							  Level 2
+							</div>
+							<div class="span3">
+							  Level 2
+							</div>
+						  </div>
+						</div>
+					  </div>
+					</div><!-- /.span -->
+					<div class="span6">
+				<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span12"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">    Level 1 of column</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"row"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span6"</span><span class="tag">&gt;</span><span class="pln">Level 2</span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"span6"</span><span class="tag">&gt;</span><span class="pln">Level 2</span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">  </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+					</div><!-- /.span -->
+				  </div><!-- /.row -->
+				</section>
+				
+			</section>
+			
+			<section id="tertiary">
+				<h3>Tertiary content</h3>
+			</section>
 		</section>
 	
 		<footer id="footer">
-			<!-- Footer template -->
+			
 		</footer>
 		
 		<!-- JAVASCRIPT: That can be deferred -->
@@ -91,20 +384,20 @@
 				Extra CSS selectors
 				JS Placeholder support
 			-->
-			<script src="/js/libs/plugins.js" defer="defer"></script>
+			<script src="js/libs/plugins.js" defer="defer"></script>
 						
 			<!-- Gesture support for mobile -->
-			<script src="/js/libs/helper.js" defer="defer"></script>
+			<script src="js/libs/helper.js" defer="defer"></script>
 			
 			<!-- Initialises scripts from plugins.js and helper.js -->
-			<script src="/js/script.js" defer="defer"></script>
+			<script src="js/script.js" defer="defer"></script>
 			
 			<!--[if (lt IE 9) & (!IEMobile)]>
 				<!-- Better resized image rendering on Windows/IE: http://unstoppablerobotninja.com/entry/fluid-images -->
-				<script src="/js/libs/imgsizer.js" defer="defer"></script>
+				<script src="js/libs/imgsizer.js" defer="defer"></script>
 				
 				<!-- CSS3 selector support -->
-				<script src="/js/libs/selectivizr-min.js" defer="defer"></script>
+				<script src="js/libs/selectivizr-min.js" defer="defer"></script>
 			<![endif]-->
 								
 		<!-- JAVASCRIPT end -->
