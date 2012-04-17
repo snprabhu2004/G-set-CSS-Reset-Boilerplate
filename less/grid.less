@@ -6,7 +6,9 @@
 
 @marginfixed: (1 - 1/(@gutter+1))*(@pagewidth/@numcols)/2;
 @marginfluid: (1 - 1/(@gutter+1))*(100/@numcols)/2;
-/*
+
+
+/* Add these variables in the media queries for new grid.
 @media (min-width: 480px) {
 	@numcols: 8;
 	@gutter: 0.5; //Gutter is foo x 1col
@@ -53,49 +55,49 @@
 }
 
 
-
-[class*="span"] {
-	background: #EEE;
-}
-
-.row {
-	.clearfix;
-	text-align: center;
-}
-
-.span1 {
-	.spanfluid(1);
-}
-
-.span3 {
-	.spanfluid(3);
-}
-
-.span4 {
-	.spanfluid(4);
-}
-
-.span6 {
-	.spanfluid(6);
-}
-
-.span8 {
-	.spanfluid(8);
-}
-
-.span12 {
-	.spanfluid(12);
-}
-
-.span16 {
-	.spanfluid(16);
-}
-
-.offset4 {
-	.offsetfluid(4);
-	
-}
-
-.offset3 {
-	.offsetfluid(3);
-}
+/* --- Example usage --- */
+		[class*="span"] {
+			background: #EEE;
+		}
+		
+		.row {
+			.clearfix;
+			text-align: center;
+		}
+		
+		.span1 {
+			.spanfluid(1);
+		}
+		
+		.span3 {
+			.spanfluid(3);
+		}
+		
+		.span4 {
+			.spanfluid(4);
+		}
+		
+		.span6 {
+			.spanfluid(6);
+		}
+		
+		.span8 {
+			.spanfluid(8);
+		}
+		
+		.span12 {
+			.spanfluid(12);
+		}
+		
+		.span16 {
+			.spanfluid(16);
+		}
+		
+		.offset4 {
+			.offsetfluid(4);
+			
+		}
+		
+		.offset3 {
+			.offsetfluid(3);
+		}
