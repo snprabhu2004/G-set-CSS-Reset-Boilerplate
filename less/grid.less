@@ -28,7 +28,22 @@
 }
 */
 
+/* 	Add this mixin to the container which your grid based items will go in.
+	Also good for nesting. Keeps things lined up and gives the content full room to manouver.
+*/
 
+.grid-fixed() {
+	margin-left: ~"-@{marginfixed}px";
+	margin-right: ~"-@{marginfixed}px";
+}
+
+.grid-fluid() {
+	margin-left: ~"-@{marginfluid}%";
+	margin-right: ~"-@{marginfluid}%";
+}
+
+/* 	How many columns do you want to span?
+*/
 
 .spanfixed(@x) {
 	@colwidth: (@pagewidth/@numcols)*@x - @marginfixed * 2;
@@ -43,6 +58,8 @@
 	margin: ~"@{marginfluid}%";
 	float: left;
 }
+
+/* Do you want to offset by x columns? */
 
 .offsetfixed(@x) {
 	@offset: (@pagewidth/@numcols)*@x + @marginfixed*1;
@@ -63,6 +80,8 @@
 		.row {
 			.clearfix;
 			text-align: center;
+			.grid-fluid();
+			
 		}
 		
 		.span1 {
