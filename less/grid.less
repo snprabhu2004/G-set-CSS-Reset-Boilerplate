@@ -1,122 +1,138 @@
 /* Grid */
 
-@numcols: 16;
+@numcols: 8;
 @gutter: 0.5; //Gutter is foo x 1col
-@pagewidth: 960;
+@pagewidth: 480;
 
-@marginfixed: (1 - 1/(@gutter+1))*(@pagewidth/@numcols)/2;
-@marginfluid: (1 - 1/(@gutter+1))*(100/@numcols)/2;
+@marginfixedeq: (1 - 1/(@gutter+1))*(@pagewidth/@numcols)/2;
+@marginfluideq: (1 - 1/(@gutter+1))*(100/@numcols)/2;
 
+/* For easier access */
 
-/* Add these variables in the media queries for new grid.
-@media (min-width: 480px) {
-	@numcols: 8;
-	@gutter: 0.5; //Gutter is foo x 1col
-	@pagewidth: 480;
+@marginfixed: ~"@{marginfixedeq}px";
+@marginfluid: ~"@{marginfluideq}%";
+
+.gridfixed() {
+	margin-left: ~"-@{marginfixedeq}px";
+	margin-right: ~"-@{marginfixedeq}px";
+	.clearfix;
 }
 
-@media (min-width: 720px) {
-	@numcols: 12;
-	@gutter: 0.5; //Gutter is foo x 1col
-	@pagewidth: 720;
-}
-
-@media (min-width: 960px) {
-	@numcols: 16;
-	@gutter: 0.5; //Gutter is foo x 1col
-	@pagewidth: 960;
-}
-*/
-
-/* 	Add this mixin to the container which your grid based items will go in.
-	Also good for nesting. Keeps things lined up and gives the content full room to manouver.
-*/
-
-.grid-fixed() {
-	margin-left: ~"-@{marginfixed}px";
-	margin-right: ~"-@{marginfixed}px";
-}
-
-.grid-fluid() {
-	margin-left: ~"-@{marginfluid}%";
-	margin-right: ~"-@{marginfluid}%";
+.gridfluid() {
+	margin-left: ~"-@{marginfluideq}%";
+	margin-right: ~"-@{marginfluideq}%";
+	.clearfix;
 }
 
 /* 	How many columns do you want to span?
 */
 
 .spanfixed(@x) {
-	@colwidth: (@pagewidth/@numcols)*@x - @marginfixed * 2;
+	@colwidth: (@pagewidth/@numcols)*@x - @marginfixedeq * 2;
 	width: ~"@{colwidth}px";
-	margin: ~"@{marginfixed}px";
+	margin: @marginfixed;
 	float: left;
 }
 
 .spanfluid(@x) {
-	@colwidth: (100/@numcols)*@x - @marginfluid * 2;
+	@colwidth: (100/@numcols)*@x - @marginfluideq * 2;
 	width: ~"@{colwidth}%";
-	margin: ~"@{marginfluid}%";
+	margin: @marginfluid;
 	float: left;
 }
 
 /* Do you want to offset by x columns? */
 
 .offsetfixed(@x) {
-	@offset: (@pagewidth/@numcols)*@x + @marginfixed*1;
+	@offset: (@pagewidth/@numcols)*@x + @marginfixedeq * 1;
 	margin-left: ~"@{offset}px";
 }
 
 .offsetfluid(@x) {
-	@offset: (100/@numcols)*@x + @marginfluid*1;
+	@offset: (100/@numcols)*@x + @marginfluideq * 1;
 	margin-left: ~"@{offset}%";
 }
 
 
 /* --- Example usage --- */
-		[class*="span"] {
+#gridSystem .container {
+	width: 480px;
+	margin-bottom: @baseline;
+	.gridfixed();
+	
+	div {
+		background: #EEE;
+	}
+	
+	&:first-of-type {
+		div {
+			.spanfixed(1);
+		}
+	}
+	
+	&:nth-of-type(2n) {
+		div {
+			.spanfixed(4);
+		}
+	}
+	
+	&:nth-of-type(3n) {
+		div {
+			.spanfixed(5);
+			
+			&:last-child {
+				.offsetfixed(1);
+			}
+		}
+	}
+	
+	&:nth-of-type(5n) {
+		div {
+			.spanfixed(8);
+		}
+	}
+		
+}
+
+@media (min-width: 720px) {
+	@numcols: 12;
+	@pagewidth: 720;
+	
+	#gridSystem .container {
+		width: 720px;
+				
+		div {
 			background: #EEE;
 		}
 		
-		.row {
-			.clearfix;
-			text-align: center;
-			.grid-fluid();
+		&:first-of-type {
+			div {
+				.spanfixed(4);
+			}
+		}
+		
+		&:nth-of-type(2n) {
+			div {
+				.spanfixed(4);
+			}
+		}
+		
+		&:nth-of-type(3n) {
+			div {
+				.spanfixed(5);
+				
+				&:last-child {
+					.offsetfixed(1);
+				}
+			}
+		}
+		
+		&:nth-of-type(5n) {
+			div {
+				.spanfixed(8);
+			}
+		}
 			
-		}
-		
-		.span1 {
-			.spanfluid(1);
-		}
-		
-		.span3 {
-			.spanfluid(3);
-		}
-		
-		.span4 {
-			.spanfluid(4);
-		}
-		
-		.span6 {
-			.spanfluid(6);
-		}
-		
-		.span8 {
-			.spanfluid(8);
-		}
-		
-		.span12 {
-			.spanfluid(12);
-		}
-		
-		.span16 {
-			.spanfluid(16);
-		}
-		
-		.offset4 {
-			.offsetfluid(4);
-			
-		}
-		
-		.offset3 {
-			.offsetfluid(3);
-		}
+	}
+
+}
