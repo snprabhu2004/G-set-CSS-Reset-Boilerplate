@@ -405,7 +405,7 @@ input[type="reset"],
 input[type="submit"],
 .button { 
 	cursor: pointer;
-	-webkit-appearance: button;
+	// Breaks Chrome styling -webkit-appearance: button;
 	border: 1px solid darken(@buttoncol,5%);
 	background: @buttoncol; /* Old browsers  #b368dd; */
 	background: -moz-linear-gradient(top, lighten(@buttoncol,20%) 0%, lighten(@buttoncol,10%) 50%, @buttoncol 51%, darken(@buttoncol,10%) 100%); /* FF3.6+ */
