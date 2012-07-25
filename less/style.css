@@ -1,3 +1,71 @@
+@import url(http://fonts.googleapis.com/css?family=Lato);
+/* Variables */
+.header-font {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.body-font {
+  font-family: 'Trebuchet MS', Trebuchet, sans-serif;
+}
+.monospace {
+  font-family: "Monaco", Courier New, monospace;
+}
+/* G-Set _________________________________________________
+
+G-set CSS/Less reset mixins
+Gavyn McKenzie 2012
+Adapted from 320andup
+
+__________________________________________________________ */
+.clearfix {
+  zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.clearfix:after {
+  clear: both;
+}
+.ir {
+  display: block;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  text-align: left;
+  text-indent: -999em;
+  direction: ltr;
+}
+.ir br {
+  display: none;
+}
+.hidden {
+  display: none;
+  visibility: hidden;
+}
+.visuallyhidden {
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0);
+}
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+  position: static;
+  margin: 0;
+  height: auto;
+  width: auto;
+  overflow: visible;
+  clip: auto;
+}
+.invisible {
+  visibility: hidden;
+}
 /* _________________________________________________
 
 G-set CSS Reset by Gavyn McKenzie
@@ -97,73 +165,6 @@ video {
   *display: inline;
   *zoom: 1;
 }
-/* G-Set _________________________________________________
-
-G-set CSS/Less reset mixins
-Gavyn McKenzie 2012
-Adapted from 320andup
-
-__________________________________________________________ */
-/* Variables */
-.header-font {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.body-font {
-  font-family: 'Trebuchet MS', Trebuchet, sans-serif;
-}
-.monospace {
-  font-family: "Monaco", Courier New, monospace;
-}
-.clearfix {
-  zoom: 1;
-}
-.clearfix:before,
-.clearfix:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.clearfix:after {
-  clear: both;
-}
-.ir {
-  display: block;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  text-align: left;
-  text-indent: -999em;
-  direction: ltr;
-}
-.ir br {
-  display: none;
-}
-.hidden {
-  display: none;
-  visibility: hidden;
-}
-.visuallyhidden {
-  position: absolute;
-  margin: -1px;
-  padding: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  border: 0;
-  clip: rect(0 0 0 0);
-}
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-  position: static;
-  margin: 0;
-  height: auto;
-  width: auto;
-  overflow: visible;
-  clip: auto;
-}
-.invisible {
-  visibility: hidden;
-}
 html {
   overflow-y: scroll;
   background: #ffffff;
@@ -177,9 +178,10 @@ body {
   margin: 0 auto;
   padding: 0;
   width: auto;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-size: 2rem;
   font-family: 'Trebuchet MS', Trebuchet, sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #282828;
   background-color: transparent;
   zoom: 1;
@@ -199,10 +201,11 @@ input,
 select,
 textarea {
   font-family: 'Trebuchet MS', Trebuchet, sans-serif;
+  font-family: 'Lato', sans-serif;
   color: #404040;
 }
 section {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
 }
 h1,
 h2,
@@ -211,44 +214,45 @@ h4,
 h5,
 h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Lato', sans-serif;
   font-weight: bold;
   text-rendering: optimizelegibility;
-  line-height: 1.5em;
+  line-height: 1.2em;
   color: #333333;
-  margin: 0 0 0.75em 0;
+  margin: 0 0 0.6em 0;
 }
 h1 {
-  font-size: 32px;
-  font-size: 3.2rem;
+  font-size: 40px;
+  font-size: 4rem;
 }
 h2 {
-  font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 35px;
+  font-size: 3.5rem;
 }
 h3 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 h4 {
-  font-size: 18.56px;
-  font-size: 1.8559999999999998rem;
+  font-size: 23.2px;
+  font-size: 2.32rem;
 }
 h5 {
-  font-size: 18.56px;
-  font-size: 1.8559999999999998rem;
+  font-size: 23.2px;
+  font-size: 2.32rem;
 }
 h6 {
-  font-size: 18.56px;
-  font-size: 1.8559999999999998rem;
+  font-size: 23.2px;
+  font-size: 2.32rem;
 }
 p,
 ol,
 ul,
 dl,
 address {
-  margin-bottom: 1.5em;
-  font-size: 16px;
-  font-size: 1.6rem;
+  margin-bottom: 1.2em;
+  font-size: 20px;
+  font-size: 2rem;
 }
 p {
   -webkit-hyphens: auto;
@@ -261,8 +265,8 @@ p {
 }
 ul,
 ol {
-  margin: 0 0 1.5em 0;
-  padding: 0 0 0 1.5em;
+  margin: 0 0 1.2em 0;
+  padding: 0 0 0 1.2em;
 }
 ul ul,
 ol ul,
@@ -271,20 +275,20 @@ ol ol {
   margin: 0;
 }
 dl {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
 }
 dt {
   font-weight: inherit;
 }
 dd {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
 }
 dd:last-child {
   margin-bottom: 0;
 }
 blockquote {
-  margin: 0 0 1.5em 0;
-  padding: 0 0 0 1.5em;
+  margin: 0 0 1.2em 0;
+  padding: 0 0 0 1.2em;
   border-left: 1px solid #bfbfbf;
   font-style: italic;
 }
@@ -341,9 +345,9 @@ code,
 kbd,
 samp {
   font-family: "Monaco", Courier New, monospace;
-  font-size: 14.4px;
-  font-size: 1.44rem;
-  line-height: 1.5em;
+  font-size: 18px;
+  font-size: 1.8rem;
+  line-height: 1.2em;
   display: block;
 }
 pre,
@@ -361,13 +365,13 @@ q:after {
   content: none;
 }
 small {
-  font-size: 14.4px;
-  font-size: 1.44rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 sub,
 sup {
-  font-size: 14.4px;
-  font-size: 1.44rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
@@ -396,12 +400,12 @@ a:active {
   outline: 0;
 }
 figure {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
 }
 figure img,
 figure object,
 figure embed {
-  margin-bottom: 0.75em;
+  margin-bottom: 0.6em;
   max-width: 100%;
 }
 figcaption {
@@ -417,15 +421,15 @@ svg:not(:root) {
 table {
   border-collapse: collapse;
   border-spacing: 0;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   width: 100%;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-size: 2rem;
 }
 th,
 td,
 caption {
-  padding: 0.1875em 10px 0.1875em 5px;
+  padding: 0.15em 10px 0.15em 5px;
 }
 tfoot {
   font-style: italic;
@@ -440,7 +444,7 @@ form {
   margin: 0;
 }
 fieldset {
-  margin-bottom: 1.5em;
+  margin-bottom: 1.2em;
   padding: 0;
   border-width: 0;
 }
@@ -462,8 +466,8 @@ button,
 input,
 select,
 textarea {
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 20px;
+  font-size: 2rem;
   margin: 0;
   vertical-align: baseline;
   *vertical-align: middle;
@@ -544,98 +548,57 @@ textarea {
   text-shadow: none;
 }
 ::-webkit-input-placeholder {
-  font-size: 14.4px;
-  font-size: 1.44rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   color: #808080;
 }
 input:-moz-placeholder {
-  font-size: 14.4px;
-  font-size: 1.44rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   color: #808080;
 }
 .ie7 img,
 .iem7 img {
   -ms-interpolation-mode: bicubic;
 }
-/* Grid */
-/* For easier access */
-/* 	How many columns do you want to span?
-*/
-/* Do you want to offset by x columns? */
-/* --- Example usage --- */
-#gridSystem .container {
-  width: 480px;
-  margin-bottom: 1.5em;
-  margin-left: -10.000000000000001px;
-  margin-right: -10.000000000000001px;
-  zoom: 1;
-}
-#gridSystem .container:before,
-#gridSystem .container:after {
-  content: "\0020";
-  display: block;
-  height: 0;
+/*====================================================================
+    grid.css
+======================================================================
+
+    @name           Grid mixins
+    @author         Gavyn McKenzie
+    @copyright      Gavyn McKenzie
+    @description    Grid mixins
+
+======================================================================
+    Contents
+======================================================================
+
+    - Grid
+
+/*====================================================================
+    Grid
+======================================================================*/
+.grid-wrap {
+  margin-left: -1em;
   overflow: hidden;
-}
-#gridSystem .container:after {
   clear: both;
 }
-#gridSystem .container div {
-  background: #EEE;
-}
-#gridSystem .container:first-of-type div {
-  width: 40px;
-  margin: 10.000000000000001px;
+.grid-basic div {
   float: left;
+  padding-left: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 33.33333333333333%;
 }
-#gridSystem .container:nth-of-type(2n) div {
-  width: 220px;
-  margin: 10.000000000000001px;
+.grid-nested div:not(.grid-wrap) {
   float: left;
-}
-#gridSystem .container:nth-of-type(3n) div {
-  width: 280px;
-  margin: 10.000000000000001px;
-  float: left;
-}
-#gridSystem .container:nth-of-type(3n) div:last-child {
-  margin-left: 70px;
-}
-#gridSystem .container:nth-of-type(5n) div {
-  width: 460px;
-  margin: 10.000000000000001px;
-  float: left;
-}
-@media (min-width: 720px) {
-  #gridSystem .container {
-    width: 720px;
-  }
-  #gridSystem .container div {
-    background: #EEE;
-  }
-  #gridSystem .container:first-of-type div {
-    width: 220px;
-    margin: 10.000000000000001px;
-    float: left;
-  }
-  #gridSystem .container:nth-of-type(2n) div {
-    width: 220px;
-    margin: 10.000000000000001px;
-    float: left;
-  }
-  #gridSystem .container:nth-of-type(3n) div {
-    width: 280px;
-    margin: 10.000000000000001px;
-    float: left;
-  }
-  #gridSystem .container:nth-of-type(3n) div:last-child {
-    margin-left: 70px;
-  }
-  #gridSystem .container:nth-of-type(5n) div {
-    width: 460px;
-    margin: 10.000000000000001px;
-    float: left;
-  }
+  padding-left: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 50%;
 }
 /*====================================================================
     buttons.css
@@ -661,12 +624,12 @@ input:-moz-placeholder {
     Buttons
 ======================================================================*/
 .btn-small {
-  font-size: 14.4px;
-  font-size: 1.44rem;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 .btn-large {
-  font-size: 19.2px;
-  font-size: 1.92rem;
+  font-size: 24px;
+  font-size: 2.4rem;
 }
 /*====================================================================
     Example usage
@@ -1116,8 +1079,68 @@ input:-moz-placeholder {
   box-shadow: none;
   border-color: #ddd;
 }
+/*====================================================================
+    etch.css
+======================================================================
+
+    @name           Etch overbranding
+    @author         Gavyn McKenzie
+    @copyright      Gavyn McKenzie
+    @description    Etch branding CSS
+
+======================================================================
+    Contents
+======================================================================
+
+    - Variables
+    - Root
+
+/*====================================================================
+    Variables
+======================================================================*/
+.body-font,
+.header-font {
+  font-family: 'Lato', sans-serif;
+}
+/*====================================================================
+    Root
+======================================================================*/
+html {
+  border-top: 0.25em solid #FF6666;
+}
+body {
+  color: #444;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+h1:before {
+  background: none repeat scroll 0 0 #FF6666;
+  content: "";
+  float: left;
+  height: 1em;
+  margin-right: 0.5em;
+  position: relative;
+  top: 0.1em;
+  width: 1em;
+}
+h3 {
+  color: #FF6666;
+}
+p {
+  font-weight: 300;
+}
 body {
   width: 90%;
+  max-width: 47em;
+  padding-top: 1.2em;
+  margin: auto;
   font-family: 'Trebuchet MS', Trebuchet, sans-serif;
+  font-family: 'Lato', sans-serif;
 }
 /* Go nuts :) */
