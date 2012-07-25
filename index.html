@@ -11,7 +11,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 
 	<head>
-		<title>G-Set</title>
+		<title>Title</title>
 		
 		<!-- Shortcut icon -->
 		<link rel="shortcut icon" href="/favicon.ico">
@@ -35,7 +35,7 @@
 		<!-- CSS -->
 					
 			<!-- Base CSS -->
-			<link rel="stylesheet/less" type="text/less" href="less/style.less">
+			<link rel="stylesheet/less" type="text/css" href="less/style.less">
 			<link rel="stylesheet/css" type="text/css" media="print" href="css/print.css">
 			
 			<!-- For progressively larger displays -->
@@ -59,15 +59,12 @@
 			
 			<!-- LESS (Delete if you have exported/compiled your CSS) -->
 			<script src="js/libs/less.js"></script>
-						
-			<!-- jQuery library -->
-			<script src="js/libs/jquery-1.6.2.min.js"></script>			
-			
+					
 			<!-- Ability Sniffing -->
 			<script src="js/libs/modernizr-2.0.6.min.js"></script>
 			
 			<!-- Handlebars Templating JS for quick apps -->
-			<!-- <script src="js/libs/handlebars.js"></script> -->
+			<script src="js/libs/handlebars.js"></script>
 			
 			<!-- Offer to turn old IE into Chrome -->
 			<!--[if lt IE 7 ]>
@@ -80,38 +77,113 @@
 
 	<body>
 		
-		<header id="mastHead">
-			<h1>G-Set</h1>
+		<header id="mast-head" role="mast-head">
+			<h1>Let's get started</h1>
 		</header>
+		<nav role="navigation">
+			<ul>
+				<li><a href="#grid">Grid</a></li>
+				<li><a href="#buttons">Buttons</a></li>
+			</ul>
+		</nav>
 		
-		<section id="content">
+		<section id="content" role="main">
 							
 		</section>
 	
-		<footer id="footer">
+		<footer id="footer" role="contentinfo">
 			
 		</footer>
 		
-		<!-- JAVASCRIPT: That can be deferred -->
+		<section id="templates" class="hidden">
+			<script type="text/x-handlebars-template" id="grid">
+				<h2>The grid</h2>
+			</script>
+			<script type="text/x-handlebars-template" id="buttons">
+				<h2>Buttons</h2>
+
+				<p>Some easy to use button mixins here. Just use .btn(color,border thickness, border radius) then add .flat, .gradient or .plain in your CSS.
+				</p>
+
+				<section>
+					<h3>Colors</h3>
+					<p>Different colors are added by passing in a color to the .btn() mixin.</p>
+					<section>
+						<h4>Gradients</h4>
+						<a href="#" class="btn gradient blue">Button</a>
+						<a href="#" class="btn gradient red">Button</a>
+						<a href="#" class="btn gradient green">Button</a>
+						<a href="#" class="btn gradient purple">Button</a>
+						<a href="#" class="btn gradient black">Button</a>
+					</section>
+
+					<section>
+						<h4>Flat</h4>
+						<a href="#" class="btn flat blue">Button</a>
+						<a href="#" class="btn flat red">Button</a>
+						<a href="#" class="btn flat green">Button</a>
+						<a href="#" class="btn flat purple">Button</a>
+						<a href="#" class="btn flat black">Button</a>
+					</section>
+
+					<section>
+						<h4>Plain</h4>
+						<a href="#" class="btn plain blue">Button</a>
+						<a href="#" class="btn plain red">Button</a>
+						<a href="#" class="btn plain green">Button</a>
+						<a href="#" class="btn plain purple">Button</a>
+						<a href="#" class="btn plain black">Button</a>
+					</section>
+				</section>
+
+				<section>
+					<h3>Sizes</h3>
+					<p>Different sizes are added by adding .btn-large or .btn-small.</p>
+					<section>
+						<h4>Gradients</h4>
+						<a href="#" class="btn gradient blue btn-small">Button</a>
+						<a href="#" class="btn gradient blue">Button</a>
+						<a href="#" class="btn gradient blue btn-large">Button</a>
 						
+					</section>
+
+					<section>
+						<h4>Flat</h4>
+						<a href="#" class="btn flat blue btn-small">Button</a>
+						<a href="#" class="btn flat blue">Button</a>
+						<a href="#" class="btn flat blue btn-large">Button</a>
+						
+					</section>
+				</section>
+			</script>
+		</section>
+
+		<!-- JAVASCRIPT: That can be deferred -->
+			
+			<!-- jQuery from Google's CDN with local fallback -->
+    		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    		<script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.2.min.js"><\/script>')</script>
+
 			<!-- 
 				Console support
 				Mobile Nav
-				Extra CSS selectors
+				Extra jQuery CSS selectors
 				JS Placeholder support
 			-->
 			<script src="js/libs/plugins.js" defer="defer"></script>
 						
-			<!-- Gesture support for mobile -->
+			<!-- Some mobile helper functions eg scalefix -->
 			<script src="js/libs/helper.js" defer="defer"></script>
 			
 			<!-- Initialises scripts from plugins.js and helper.js -->
 			<script src="js/script.js" defer="defer"></script>
+
+			<!-- Script to init documentation templating js, delete this for using the boilerplate -->
+			<script src="js/documentation.js"></script>			
 			
+			<!-- Better resized image rendering on Windows/IE: http://unstoppablerobotninja.com/entry/fluid-images -->
 			<!--[if (lt IE 9) & (!IEMobile)]>
-				<!-- Better resized image rendering on Windows/IE: http://unstoppablerobotninja.com/entry/fluid-images -->
 				<script src="js/libs/imgSizer.js" defer="defer"></script>
-								
 			<![endif]-->
 								
 		<!-- JAVASCRIPT end -->
