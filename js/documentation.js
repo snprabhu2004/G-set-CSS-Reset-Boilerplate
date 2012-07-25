@@ -13,9 +13,13 @@
 var contentLoader = function() {
     
     function loadTemplate(template) {
-        var source   = $(template).html();
-        var template = Handlebars.compile(source);
-        $("#content").html(template()); 
+        if ($(template).length) {
+            var source   = $(template).html();
+            var template = Handlebars.compile(source);
+            $("#content").html(template()); 
+        } else {
+            loadTemplate("#four-oh-four");
+        }
     }
 
     //init
@@ -29,12 +33,9 @@ var contentLoader = function() {
         // Cache the selector
         var template = $(this).attr("href");
 
-        if ($(template).length) {
-            // Load template with handlebars.js
-            loadTemplate(template);     
-        } else {
-            alert("That section of the documentation is missing");
-        }
+        // Load template with handlebars.js
+        loadTemplate(template);     
+        
     });
 }
 
