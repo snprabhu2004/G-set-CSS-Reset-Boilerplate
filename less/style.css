@@ -600,6 +600,55 @@ input:-moz-placeholder {
   box-sizing: border-box;
   width: 50%;
 }
+.grid-basic-responsive > div {
+  float: left;
+  padding-left: 1em;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+}
+@media (min-width: 30em) {
+  .grid-basic-responsive > div {
+    float: left;
+    padding-left: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+  }
+  .grid-basic-responsive > div:last-child {
+    float: left;
+    padding-left: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+  }
+}
+@media (min-width: 50em) {
+  .grid-basic-responsive > div {
+    float: left;
+    padding-left: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333333333333%;
+  }
+  .grid-basic-responsive > div:last-child {
+    float: left;
+    padding-left: 1em;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.33333333333333%;
+  }
+}
+.blocked {
+  padding: 1em;
+  background: #F2F2F2;
+  margin-bottom: 1em;
+}
 /*====================================================================
     buttons.css
 ======================================================================
