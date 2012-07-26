@@ -58,7 +58,7 @@
 		<!-- JAVASCRIPT: Must run straight away -->
 			
 			<!-- LESS (Delete if you have exported/compiled your CSS) -->
-			<script src="js/libs/less.js"></script>
+			<script src="js/libs/less-1.3.0.min.js"></script>
 					
 			<!-- Ability Sniffing -->
 			<script src="js/libs/modernizr-2.0.6.min.js"></script>
@@ -108,119 +108,111 @@
 				<p>Wrap your grid in .grid-wrap, then use the .grid-col mixin</p>
 
 				<h3>Basic grid</h3>
-				<div class="grid-wrap grid-basic">
+				<div class="grid-wrap">
+					<div class="grid g-4-12">
+						<h4>Grid col</h4>
+						<p>
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
+						</p>
+					</div>
+					<div class="grid g-4-12">
+						<h4>Grid col</h4>
+						<p>
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
+						</p>
+					</div>
+					<div class="grid g-4-12">
+						<h4>Grid col</h4>
+						<p>
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
+						</p>
+					</div>
 					
-					<div>
-						<h4>Grid Col</h4>
-						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
-						</p>
-					</div>
-					<div>
-						<h4>Grid Col</h4>
-						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
-						</p>
-					</div>
-					<div>
-						<h4>Grid Col</h4>
-						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
-						</p>
-					</div>
 				</div>
 
 				<h3>Nested grid</h3>
-				<div class="grid-wrap grid-nested">
+				<div class="grid-wrap">
 					
-					<div>
-						<h4>Grid Col</h4>
+					<div class="grid g-6-12">
+						<h4>Grid col</h4>
 						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 						</p>
 
 						<div class="grid-wrap">
-							<div>
-								<h4>Grid Col</h4>
+							<div class="grid g-6-12">
+								<h4>Grid col</h4>
 								<p>
-									Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
+									Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 								</p>
 							</div>
-							<div>
-								<h4>Grid Col</h4>
+							<div class="grid g-6-12">
+								<h4>Grid col</h4>
 								<p>
-									Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
+									Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 								</p>
 							</div>
-
 						</div>
 					</div>
-					<div>
-						<h4>Grid Col</h4>
+					<div class="grid g-6-12">
+						<h4>Grid col</h4>
 						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 						</p>
+						<h4>Grid col</h4>
 						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie. 
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 						</p>
 					</div>
+										
 				</div>
 				<h3>Basic responsive grid</h3>
-				<div class="grid-wrap grid-basic-responsive">
-					
-					<div>
-						<h4>Grid Col</h4>
+				<div class="grid-wrap">
+					<div class="grid g-4-12 mq1-g-1-2 mq2-g-1-1">
+						<h4>Grid col</h4>
 						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 						</p>
 					</div>
-					<div>
-						<h4>Grid Col</h4>
+					<div class="grid g-4-12 mq1-g-1-2 mq2-g-1-1">
+						<h4>Grid col</h4>
 						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 						</p>
 					</div>
-					<div>
-						<h4>Grid Col</h4>
+					<div class="grid g-4-12 mq1-g-2-2">
+						<h4>Grid col</h4>
 						<p>
-							Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
+							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
 						</p>
 					</div>
 				</div>
 
 				<h3>Blocked grid</h3>
-				<div class="grid-wrap grid-blocked grid-basic-responsive">
+				<div class="grid-wrap">
+					<div class="grid g-5-12 mq1-g-1-2 mq2-g-1-1">
+						<div class="blocked">
+							<h4>Grid col</h4>
+							<p>
+								Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
+							</p>
+						</div>
+					</div>
+					<div class="grid g-7-12 mq1-g-1-2 mq2-g-1-1">
+						<div class="blocked">
+							<h4>Grid col</h4>
+							<p>
+								Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
+							</p>
+						</div>
+					</div>
 					
-					<div>
-						<div class="blocked">
-							<h4>Grid Col</h4>
-							<p>
-								Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
-							</p>
-						</div>
-					</div>
-					<div>
-						<div class="blocked">
-							<h4>Grid Col</h4>
-							<p>
-								Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
-							</p>
-						</div>
-					</div>
-					<div>
-						<div class="blocked">
-							<h4>Grid Col</h4>
-							<p>
-								Candy canes tootsie roll chocolate candy wypas chocolate bar I love I love candy canes. Sesame snaps chocolate wypas I love cake. Chupa chups apple pie candy jujubes sweet roll bear claw applicake brownie.
-							</p>
-						</div>
-					</div>
 				</div>
 			</script>
 			<script type="text/x-handlebars-template" id="buttons">
 				<h2>Buttons</h2>
 
-				<p>Some easy to use button mixins here. Just use .btn(color,border thickness, border radius) then add .flat, .gradient or .plain in your CSS. #WIP have just refactored this code so documentation isn't quite as good
+				<p>Some easy to use button mixins here. Just use .btn(color,border thickness, border radius) then add .flat, .gradient or .plain in your CSS. #WIP have just refactored this code so documentation isn&apos;t quite as good
 				</p>
 
 				<section>
