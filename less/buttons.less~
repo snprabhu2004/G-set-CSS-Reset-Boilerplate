@@ -42,25 +42,13 @@
     font-family: inherit;
     padding: 0.5em 1.5em;
     border: @border solid darken(@btn-background,30%);
+    //font-size: inherit;
+    
     .rounded(@radius);
     .btn-text(@btn-background);
 
-    &[disabled],
-    &[disabled]:hover,
-    &[disabled]:focus,
-    &[disabled]:active  {
-        cursor:default;
-        color: #999;
-        text-shadow: 1px 1px #FFFFFF;
-        background:#eee;
-        box-shadow:none;
-        border-color:#ddd;
-    } 
-}
-
-.btn-flat(@btn-background,@border,@radius) {
-    .btn(@btn-background,@border,@radius);
-
+    // Flat buttons
+    &.flat {
         background: @btn-background;
 
         &:hover {
@@ -77,11 +65,11 @@
             background: @btn-background;
             .btn-text(@btn-background);
         }
-}
+    }
 
-.btn-gradient(@btn-background,@border,@radius) {
-    .btn(@btn-background,@border,@radius);        
-    .grad-col(@btn-background, darken(@btn-background,10%), @btn-background ); 
+    //Gradient buttons
+    &.gradient {
+        .grad-col(@btn-background, darken(@btn-background,10%), @btn-background ); 
         -o-box-shadow:0 1px 2px #FFFFFF inset;
         -moz-box-shadow:0 1px 2px #FFFFFF inset;
         -webkit-box-shadow:0 1px 2px #FFFFFF inset;
@@ -112,8 +100,7 @@
         }
     }
 
-.btn-plain(@btn-background,@border,@radius) {
-    .btn(@btn-background,0px,0px);
+    &.plain {
         background: none;
         border: 0px none;
         text-shadow: none;
@@ -126,9 +113,19 @@
         &:visited {
             background: @btn-background;
         }
-    
+    }
 
-    
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled]:active  {
+        cursor:default;
+        color: #999;
+        text-shadow: 1px 1px #FFFFFF;
+        background:#eee;
+        box-shadow:none;
+        border-color:#ddd;
+    } 
 }
 
 //Sizing
@@ -145,21 +142,21 @@
 ======================================================================*/
 
 .btn.blue {
-    .btn-gradient(#EFFAFC,1px,3px);
+    .btn(#EFFAFC,1px,3px);
 }
 
 .btn.red {
-    .btn-flat(#DD0000,1px,3px);
+    .btn(#DD0000,1px,3px);
 }
 
 .btn.green {
-    .btn-gradient(#8BDC1E,1px,3px);
+    .btn(#8BDC1E,1px,3px);
 }
 
 .btn.purple {
-    .btn-plain(#660099,1px,3px);
+    .btn(#660099,1px,3px);
 }
 
 .btn.black {
-    .btn-plain(#333,1px,3px);
+    .btn(#333,1px,3px);
 }
