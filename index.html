@@ -63,8 +63,8 @@
 			<!-- Ability Sniffing -->
 			<script src="js/libs/modernizr-2.0.6.min.js"></script>
 			
-			<!-- Handlebars Templating JS for quick apps -->
-			<script src="js/libs/handlebars.js"></script>
+			<!-- Handlebars Templating JS for quick apps, ready if you want it -->
+			<!-- <script src="js/libs/handlebars.js"></script> -->
 			
 			<!-- Offer to turn old IE into Chrome -->
 			<!--[if lt IE 7 ]>
@@ -82,9 +82,9 @@
 		</header>
 		<nav role="navigation">
 			<ul>
-				<li><a href="#grid">Grid</a></li>
-				<li><a href="#buttons">Buttons</a></li>
-				<li><a href="#icons">Icons</a></li>
+				<li><a href="docs/grid.html">Grid</a></li>
+				<li><a href="docs/buttons.html">Buttons</a></li>
+				<li><a href="docs/icons.html">Icons</a></li>
 			</ul>
 		</nav>
 		
@@ -97,147 +97,6 @@
 			
 		</footer>
 		
-		<section id="templates" class="hidden">
-			<script type="text/x-handlebars-template" id="four-oh-four">
-				<h2>Oh dear</h2>
-				<p>Something has gone horribly, horribly wrong. We can&apos;t find that section.</p>
-			</script>
-			<script type="text/x-handlebars-template" id="grid">
-				<h2>The grid</h2>
-
-				<p>Wrap your grid in .grid-wrap, then use the .grid-col mixin or use .grid-generator() to create grid css in a couple of key strokes.</p>
-
-				<h3>Basic grid</h3>
-				<div class="grid-wrap">
-					<div class="grid g-4-12">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-					</div>
-					<div class="grid g-4-12">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-					</div>
-					<div class="grid g-4-12">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-					</div>
-					
-				</div>
-
-				<h3>Nested grid</h3>
-				<div class="grid-wrap">
-					
-					<div class="grid g-6-12">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-
-						<div class="grid-wrap">
-							<div class="grid g-6-12">
-								<h4>Grid col</h4>
-								<p>
-									Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-								</p>
-							</div>
-							<div class="grid g-6-12">
-								<h4>Grid col</h4>
-								<p>
-									Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="grid g-6-12">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-					</div>
-										
-				</div>
-				<h3>Basic responsive grid</h3>
-				<div class="grid-wrap">
-					<div class="grid g-4-12 mq1-g-1-2 mq2-g-1-1">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-					</div>
-					<div class="grid g-4-12 mq1-g-1-2 mq2-g-1-1">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-					</div>
-					<div class="grid g-4-12 mq1-g-2-2">
-						<h4>Grid col</h4>
-						<p>
-							Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-						</p>
-					</div>
-				</div>
-
-				<h3>Blocked grid</h3>
-				<div class="grid-wrap">
-					<div class="grid g-5-12 mq1-g-1-2 mq2-g-1-1">
-						<div class="blocked">
-							<h4>Grid col</h4>
-							<p>
-								Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-							</p>
-						</div>
-					</div>
-					<div class="grid g-7-12 mq1-g-1-2 mq2-g-1-1">
-						<div class="blocked">
-							<h4>Grid col</h4>
-							<p>
-								Biscuit chupa chups liquorice sesame snaps cotton candy. Sesame snaps macaroon fruitcake halvah cookie I love sugar plum. Tootsie roll liquorice I love wypas soufflé muffin chocolate cake halvah. Wypas sugar plum tootsie roll.
-							</p>
-						</div>
-					</div>
-					
-				</div>
-			</script>
-			<script type="text/x-handlebars-template" id="buttons">
-				<h2>Buttons</h2>
-
-				<p>
-					Some easy to use button mixins here. Just do .btn-flat(),.btn-gradient() or .btn-plain() with the optional params of color, border thickness, border radius.
-				</p>
-
-				<section>
-					<h3>Colors</h3>
-					<p>Different colors are added by passing in a color to the .btn-gradient(),.btn-flat(),.btn-plain() mixins.</p>
-					
-					<a href="#" class="btn-primary">Gradient</a>
-					<a href="#" class="btn-secondary">Gradient</a>
-					<a href="#" class="btn-tertiary">Flat</a>
-					<a href="#" class="btn-special">Plain</a>
-
-				</section>
-
-				<section>
-					<h3>Sizes</h3>
-					<p>Different sizes are added by adding .btn-large or .btn-small.</p>
-					
-					<a href="#" class="btn-primary btn-small">Gradient</a>
-					<a href="#" class="btn-secondary">Gradient</a>
-					<a href="#" class="btn-tertiary btn-large">Flat</a>
-				</section>
-			</script>
-		</section>
-
 		<!-- JAVASCRIPT: That can be deferred -->
 			
 			<!-- jQuery from Google's CDN with local fallback -->
@@ -259,7 +118,7 @@
 			<script src="js/script.js" defer="defer"></script>
 
 			<!-- Script to init documentation templating js, delete this for using the boilerplate -->
-			<script src="js/documentation.js" defer="defer"></script>			
+			<script src="docs/documentation.js" defer="defer"></script>			
 			
 			<!-- Better resized image rendering on Windows/IE: http://unstoppablerobotninja.com/entry/fluid-images -->
 			<!--[if (lt IE 9) & (!IEMobile)]>

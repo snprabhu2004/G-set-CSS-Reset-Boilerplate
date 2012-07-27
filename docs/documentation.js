@@ -13,22 +13,22 @@
 var contentLoader = function() {
     
     function loadTemplate(template) {
-        if ($(template).length) {
-            var source   = $(template).html();
-            var template = Handlebars.compile(source);
-            $("#content").html(template()); 
-        } else {
-            loadTemplate("#four-oh-four");
-        }
+        $('#content').load(template, function(response, status, xhr) {
+            if (status == "error") { 
+                $('#content').load('docs/404.html');
+            }
+            window.location.hash = template;
+        });
     }
 
     //init
     if (window.location.hash) {
-        loadTemplate(window.location.hash);
+        template = window.location.hash.replace("#",""); 
+        loadTemplate(template);
     }
     // Anchors pointing at an id, but not a hash placeholder
-    $("[href^=#]:not([href=#])").click(function(e) {
-        //e.preventDefault();
+    $("a:not([href=#])").click(function(e) {
+        e.preventDefault();
 
         // Cache the selector
         var template = $(this).attr("href");
