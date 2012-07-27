@@ -13,11 +13,14 @@
 var contentLoader = function() {
     
     function loadTemplate(template) {
-        $('#content').load(template, function(response, status, xhr) {
-            if (status == "error") { 
-                $('#content').load('docs/404.html');
-            }
-            window.location.hash = template;
+        $("#content").fadeOut("fast", function() {
+            $('#content').load(template, function(response, status, xhr) {
+                if (status == "error") { 
+                    $('#content').load('docs/404.html');
+                }
+                window.location.hash = template;
+                $("#content").fadeIn("fast");
+            });
         });
     }
 
