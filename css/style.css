@@ -538,13 +538,13 @@ textarea {
   text-shadow: none;
 }
 ::-moz-selection {
-  background: #333333;
-  color: #333333;
+  background: #e6e6e6;
+  color: #fafafa;
   text-shadow: none;
 }
 ::selection {
-  background: #333333;
-  color: #333333;
+  background: #e6e6e6;
+  color: #fafafa;
   text-shadow: none;
 }
 ::-webkit-input-placeholder {
@@ -925,7 +925,7 @@ input:-moz-placeholder {
   list-style-type: none;
   padding: 0;
 }
-.icon {
+i.icon {
   font-style: normal;
   font-weight: normal;
   font-size: 1em;
@@ -945,6 +945,14 @@ input:-moz-placeholder {
 }
 .btn-plain .icon {
   margin: 0 0.6em 0 0;
+}
+.list-icons {
+  list-style-type: none;
+  padding: 0;
+}
+.list-icons .icon:before {
+  margin: 0 0.3em 0 0;
+  width: 1em;
 }
 /*====================================================================
     Icon Positioning
@@ -1634,15 +1642,11 @@ h5 {
   text-transform: uppercase;
   font-weight: 300;
 }
-h1:before {
-  background: none repeat scroll 0 0 #FF6666;
-  content: "";
-  float: left;
-  height: 1em;
-  margin-right: 0.5em;
-  position: relative;
-  top: 0.1em;
-  width: 1em;
+h1 {
+  border-left: 1em solid #FF6666;
+  line-height: 1em;
+  margin-left: -1.5em;
+  padding-left: 0.5em;
 }
 h3 {
   color: #FF6666;
